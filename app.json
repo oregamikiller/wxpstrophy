@@ -7,7 +7,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "ps4"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "ps3"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "psv"
       },
       {
         "pagePath": "pages/logs/logs",
