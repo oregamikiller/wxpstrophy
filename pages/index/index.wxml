@@ -1,9 +1,16 @@
 <!--index.wxml-->
 <view class="container">
-  
+  <view class="anglesList" wx:for="{{list}}"> 
 
-  <view wx:for="{{list}}">
-  <text>{{item.title}}</text>
-  { <image src="{{item.cdnPic}}"></image>
+  
+    <view class="imgBox"> 
+      <image src="{{item.cdnPic}}" mode="aspectFill"></image> 
+    
+    </view> 
+    <view class="textBox"> 
+      <text class="name">{{item.title}}</text>
+      <text class="companyName">{{item.desc}}</text> 
+      <text class="num">{{item.plantForm}}</text> 
+    </view> 
 </view>
 </view>

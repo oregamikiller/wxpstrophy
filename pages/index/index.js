@@ -3,8 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    list: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -14,16 +13,9 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
+    var that = this;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=ps4', //仅为示例，并非真实的接口地址
+      url: 'https://www.semidream.com/trophydata/?platForm=ps4', 
       header: {
         'content-type': 'application/json'
       },
@@ -37,16 +29,19 @@ Page({
   },
 
   onReachBottom: function () {
-    var that = this
+    var that = this;
+    console.log(this.data.list.length)
+    let page = parseInt(this.data.list.length / 20) + 1;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=ps4', //仅为示例，并非真实的接口地址
+      url: 'https://www.semidream.com/trophydata/?platForm=ps4&page=' + page, //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json'
       },
       success: function (res) {
         console.log(res.data)
+        var templist = that.data.list.concat(res.data)
         that.setData({
-          list: res.data
+          list: templist
         })
       }
     })

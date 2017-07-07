@@ -1,21 +1,54 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.anglesList{ 
+  display:flex;
+  align-items:center;
+  padding:5rpx 5rpx 5rpx;
+  margin-left:1rpx;
+  border-bottom:1px solid #f1f1f1; 
+} 
+
+.anglesList .anglesNavigator{ 
+  display:flex;
+  align-items:center;
+  flex-grow:1;
+} 
+
+.anglesList .imgBox{ 
+  flex:0 0 320rpx;
+  width:320rpx; 
+  height:180rpx; 
+  /*border-radius:50%; */
+  padding:5rpx; 
+  margin-right:20rpx; 
+  background:linear-gradient(#fff,#6a6969); 
+} 
+
+.anglesList .imgBox image{ 
+  width:320rpx; 
+  height:180rpx; 
+
+} 
+
+.anglesList .textBox{ 
+  flex-grow:1;
+} 
+
+.anglesList text{ 
+  display:block; 
+  max-width:12em; 
+  overflow:hidden; 
+  white-space:break-all; 
+  text-overflow:ellipsis; 
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.btnFollow{ 
+  flex-basis:140rpx; 
+  height:46rpx; 
+  border:1px solid #007ae8; 
+  border-radius:24rpx; 
+  background:#fff; 
+  text-align:center; 
+  font-size:28rpx; 
+  line-height:46rpx; 
+  color:#007ae8; 
 }
