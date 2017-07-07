@@ -34,5 +34,21 @@ Page({
         })
       }
     })
-  }
+  },
+
+  onReachBottom: function () {
+    var that = this
+    wx.request({
+      url: 'https://www.semidream.com/trophydata/?platForm=ps4', //仅为示例，并非真实的接口地址
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          list: res.data
+        })
+      }
+    })
+  },
 })
