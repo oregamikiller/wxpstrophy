@@ -1,8 +1,54 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+/**index.wxss**/
+.anglesList{ 
+  display:flex;
+  align-items:center;
+  padding:5rpx 5rpx 5rpx;
+  margin-left:1rpx;
+  border-bottom:1px solid #f1f1f1; 
+} 
+
+.anglesList .anglesNavigator{ 
+  display:flex;
+  align-items:center;
+  flex-grow:1;
+} 
+
+.anglesList .imgBox{ 
+  flex:0 0 240rpx;
+  width:240rpx; 
+  height:135rpx; 
+  /*border-radius:50%; */
+  padding:5rpx; 
+  margin-right:20rpx; 
+  background:linear-gradient(#fff,#6a6969); 
+} 
+
+.anglesList .imgBox image{ 
+  width:240rpx; 
+  height:135rpx; 
+
+} 
+
+.anglesList .textBox{ 
+  flex-grow:1;
+} 
+
+.anglesList text{ 
+  display:block; 
+  max-width:12em; 
+  overflow:hidden; 
+  white-space:break-all; 
+  text-overflow:ellipsis; 
 }
-.log-item {
-  margin: 10rpx;
+
+.btnFollow{ 
+  flex-basis:140rpx; 
+  height:46rpx; 
+  border:1px solid #007ae8; 
+  border-radius:24rpx; 
+  background:#fff; 
+  text-align:center; 
+  font-size:28rpx; 
+  line-height:46rpx; 
+  color:#007ae8; 
 }

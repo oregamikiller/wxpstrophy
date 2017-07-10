@@ -1,14 +1,23 @@
 //logs.js
-var util = require('../../utils/util.js')
 Page({
   data: {
-    logs: []
+    list: []
   },
   onLoad: function () {
+    console.log(wx.getStorageSync('logs'))
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(function (log) {
-        return util.formatTime(new Date(log))
-      })
+      list: wx.getStorageSync('logs') || []
+
+    })
+  },
+
+    detailClick: function (event) {
+    var logs = wx.getStorageSync('logs') || [];
+    console.log(event.currentTarget.dataset.item);
+    logs.unshift(event.currentTarget.dataset.item);
+    wx.setStorageSync('logs', logs)
+    wx.navigateTo({
+      url: '../detail/detail?id=' + event.currentTarget.dataset.id
     })
   }
 })
