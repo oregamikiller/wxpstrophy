@@ -1,33 +1,43 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/detail"
   ],
-"tabBar": {
+  "tabBar": {
     "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "img/1.jpg",
+        "selectedIconPath":  "img/1.jpg",     
         "text": "ps4"
       },
       {
         "pagePath": "pages/index/index",
+        "iconPath": "img/2.png", 
+        "selectedIconPath": "img/2.png",
+        
         "text": "ps3"
       },
       {
         "pagePath": "pages/index/index",
+        "iconPath": "img/3.jpg",
+        "selectedIconPath":"img/3.jpg",
         "text": "psv"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "iconPath": "img/4.png",
+        "selectedIconPath":"img/4.png",
+        "text": "历史"
       }
     ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   }
 }

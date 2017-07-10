@@ -11,8 +11,8 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    console.log('onLoad')
+  onLoad: function (options) {
+    console.log('options', options)
     var that = this;
     wx.request({
       url: 'https://www.semidream.com/trophydata/?platForm=ps4', 
@@ -46,4 +46,10 @@ Page({
       }
     })
   },
+
+  detailClick: function(event) {
+    wx.navigateTo({
+      url: '../detail/detail?id=' +           event.currentTarget.dataset.id
+    })
+  }
 })

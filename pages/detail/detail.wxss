@@ -14,9 +14,9 @@
 } 
 
 .anglesList .imgBox{ 
-  flex:0 0 240rpx;
-  width:240rpx; 
-  height:135rpx; 
+  flex:0 0 108rpx;
+  width:108rpx; 
+  height:108rpx; 
   /*border-radius:50%; */
   padding:5rpx; 
   margin-right:20rpx; 
@@ -24,8 +24,8 @@
 } 
 
 .anglesList .imgBox image{ 
-  width:240rpx; 
-  height:135rpx; 
+  width:108rpx; 
+  height:108rpx; 
 
 } 
 
