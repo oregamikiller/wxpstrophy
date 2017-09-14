@@ -15,7 +15,7 @@ Page({
     console.log('options', options)
     var that = this;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=ps4', 
+      url: 'https://www.semidream.com/trophydata/?platForm=ps3', 
       header: {
         'content-type': 'application/json'
       },
@@ -33,7 +33,7 @@ Page({
     console.log(this.data.list.length)
     let page = parseInt(this.data.list.length / 20) + 1;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=ps4&page=' + page, //仅为示例，并非真实的接口地址
+      url: 'https://www.semidream.com/trophydata/?platForm=ps3&page=' + page, //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json'
       },
@@ -49,22 +49,18 @@ Page({
 
   detailClick: function(event) {
     var logs = wx.getStorageSync('logs') || [];
-    console.log(event.currentTarget.dataset.item);
     var logs = wx.getStorageSync('logs') || [];
     console.log(event.currentTarget.dataset.item);
     var exist = false;
     logs.forEach(function (e,i) {
       if (e.id == event.currentTarget.dataset.id) {
-        
         exist = true;
       }
     })
-    console.log(exist);
     if (!exist) {
       logs.unshift(event.currentTarget.dataset.item);
       wx.setStorageSync('logs', logs)
     }
-    wx.setStorageSync('logs', logs)
     wx.navigateTo({
       url: '../detail/detail?id=' +           event.currentTarget.dataset.id
     })

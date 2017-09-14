@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/index1",
+    "pages/index/index2",
     "pages/logs/logs",
     "pages/detail/detail"
   ],
@@ -13,14 +15,14 @@
         "text": "ps4"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index/index1",
         "iconPath": "img/2.png", 
         "selectedIconPath": "img/2.png",
         
         "text": "ps3"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index/index2",
         "iconPath": "img/3.jpg",
         "selectedIconPath":"img/3.jpg",
         "text": "psv"

@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="anglesList" wx:key="*this" wx:for="{{list}}"> 
+
+  
+    <view class="imgBox"  data-id="{{item.id}}" data-item="{{item}}" bindtap="detailClick"> 
+      <image src="{{item.localPic}}" mode="aspectFill"></image> 
+    
+    </view> 
+    <view class="textBox" data-id="{{item.id}}"  data-item="{{item}}" bindtap="detailClick"> 
+      <text class="name">{{item.title}}</text>
+      <text class="companyName">{{item.desc}}</text> 
+      <text class="num">{{item.plantForm}}</text> 
+    </view> 
+</view>
+</view>
