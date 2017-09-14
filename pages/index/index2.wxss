@@ -14,18 +14,18 @@
 } 
 
 .anglesList .imgBox{ 
-  flex:0 0 240rpx;
-  width:240rpx; 
-  height:135rpx; 
+  flex:1;
+  width:288rpx; 
+  height:162rpx; 
   /*border-radius:50%; */
   padding:5rpx; 
-  margin-right:20rpx; 
+  margin-right:5rpx; 
   background:linear-gradient(#fff,#6a6969); 
 } 
 
 .anglesList .imgBox image{ 
-  width:240rpx; 
-  height:135rpx; 
+  width:288rpx; 
+  height:162rpx; 
 
 } 
 
@@ -34,21 +34,10 @@
 } 
 
 .anglesList text{ 
-  display:block; 
-  max-width:12em; 
+  display:block;  
   overflow:hidden; 
   white-space:break-all; 
-  text-overflow:ellipsis; 
+  text-overflow:ellipsis;
+  margin-left: 2rpx 
 }
 
-.btnFollow{ 
-  flex-basis:140rpx; 
-  height:46rpx; 
-  border:1px solid #007ae8; 
-  border-radius:24rpx; 
-  background:#fff; 
-  text-align:center; 
-  font-size:28rpx; 
-  line-height:46rpx; 
-  color:#007ae8; 
-}
