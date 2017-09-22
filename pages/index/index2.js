@@ -15,7 +15,7 @@ Page({
     console.log('options', options)
     var that = this;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=psv', 
+      url: 'https://www.semidream.com/trophydata/?platForm=psvita',
       header: {
         'content-type': 'application/json'
       },
@@ -33,7 +33,7 @@ Page({
     console.log(this.data.list.length)
     let page = parseInt(this.data.list.length / 20) + 1;
     wx.request({
-      url: 'https://www.semidream.com/trophydata/?platForm=ps4&page=' + page, //仅为示例，并非真实的接口地址
+      url: 'https://www.semidream.com/trophydata/?platForm=psvita&page=' + page, //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json'
       },
